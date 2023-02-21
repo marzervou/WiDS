@@ -31,10 +31,11 @@ The following outlines the workflow to demo the repo.
 
 ### STEP 1: Set up
 1. Fork https://github.com/marzervou/wids
+2. pip install dbx --> This automatically installs the databricks cli
 2. Configure [Databricks CLI connection profile](https://docs.databricks.com/dev-tools/cli/index.html#connection-profiles)
-    - The project is designed to use 3 different Databricks CLI connection profiles: dev, staging and prod. 
-      These profiles are set in [wids/.dbx/project.json](https://github.com/marzervou/wids/blob/main/.dbx/project.json).
-    - Note that for demo purposes we use the same connection profile for each of the 3 environments --> All envs point to the same workspace URL
+    - We need to configure 3 different profiles: dev, staging and prod. We need to configure those using the [databricks cli](https://docs.databricks.com/dev-tools/cli/index.html#connection-profiles) 
+      These profiles are then linked in [wids/.dbx/project.json](https://github.com/marzervou/wids/blob/main/.dbx/project.json).
+    - Note that for demo purposes we use the same connection profile for each of the 3 environments --> So you can either configure it 3 times, one for dev, staging and prod pointing to the same workspace url, or just once by keeping in mind that every time you are asked to provide a profile you need to provide the same irrespectively of the env.
       **In practice each profile would correspond to separate dev, staging and prod Databricks workspaces.**
     - This [project.json](https://github.com/marzervou/wids/blob/main/.dbx/project.json) file will have to be 
       adjusted accordingly to the connection profiles a user has configured on their local machine.
@@ -51,6 +52,9 @@ The following outlines the workflow to demo the repo.
             - [Databricks access token](https://docs.databricks.com/dev-tools/api/latest/authentication.html) for production workspace
         - `GH_TOKEN`
             - GitHub [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+
+**For the demo purposes all the above tokens can actually be the same token**
     
 ### STEP 2: Build the starting point for the demo
 
