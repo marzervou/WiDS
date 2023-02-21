@@ -82,7 +82,7 @@ environments:
   staging:
       strict_path_adjustment_policy: true
       jobs:
-        - name: 'staging-telco-churn-sample-integration-test'
+        - name: 'wids-staging-telco-churn-sample-integration-test'
           <<:
             - *staging-cluster-config
           spark_python_task:
