@@ -126,7 +126,7 @@ environments:
 
       - name: 'wids-prod-telco-churn-train-deploy-inference-workflow'
         git_source:
-          git_url: https://github.com/marzervou/wids-mlops.git
+          git_url: https://github.com/marzervou/wids.git
           git_provider: "github"
           git_branch: "main"
         tasks:
@@ -157,7 +157,7 @@ environments:
         <<:
           - *prod-cluster-config
         git_source:
-          git_url: https://github.com/marzervou/wids-mlops.git
+          git_url: https://github.com/marzervou/wids.git
           git_provider: "github"
           git_branch: "main"
         tasks:
@@ -172,7 +172,7 @@ environments:
         <<:
           - *prod-cluster-config
         git_source:
-          git_url: https://github.com/marzervou/wids-mlops.git
+          git_url: https://github.com/marzervou/wids.git
           git_provider: "github"
           git_branch: "main"
         tasks:
@@ -186,7 +186,7 @@ environments:
         <<:
           - *prod-cluster-config
         git_source:
-          git_url: https://github.com/marzervou/wids-mlops.git
+          git_url: https://github.com/marzervou/wids.git
           git_provider: "github"
           git_branch: "main"
         tasks:
