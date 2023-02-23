@@ -124,7 +124,7 @@ environments:
                            '--env', 'file:fuse://conf/prod/.prod.env',
                            '--conf-file', 'file:fuse://conf/pipeline_configs/model_train.yml']
 
-        - name: 'wids-prod-telco-churn-train-deploy-inference-workflow'
+      - name: 'wids-prod-telco-churn-train-deploy-inference-workflow'
         git_source:
           git_url: https://github.com/marzervou/wids-mlops.git
           git_provider: "github"
