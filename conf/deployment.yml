@@ -81,7 +81,6 @@ environments:
 
   staging:
       strict_path_adjustment_policy: true
-
       workflows:
         - name: 'wids-staging-telco-churn-sample-integration-test'
           <<:
