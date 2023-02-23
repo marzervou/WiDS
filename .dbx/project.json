@@ -1,0 +1,29 @@
+{
+    "environments": {
+        "dev": {
+            "profile": "wids-dev",
+            "workspace_dir": "/Shared/mzervou/wids/dev/dbx/wids_mlops_dev",
+            "artifact_location": "dbfs:/Shared/mzervou/wids_mlops/dev/dbx/projects/wids_mlops_dbx_dev"
+        },
+        "staging": {
+            "profile": "wids-staging",
+            "workspace_dir": "/Shared/mzervou/wids/staging/dbx/wids_mlops_staging",
+            "artifact_location": "dbfs:/Shared/mzervou/wids_mlops/staging/dbx/projects/wids_mlops_dbx_staging"
+        },
+        "prod": {
+            "profile": "wids-prod",
+            "workspace_dir": "/Shared/mzervou/wids/prod/dbx/wids_mlops_prod",
+            "artifact_location": "dbfs:/Shared/mzervou/wids_mlops/prod/dbx/projects/wids_mlops_dbx_prod"
+        },
+        "default": {
+            "profile": "DEFAULT",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/mzervou/dbx/projects/wids_mlops",
+                "artifact_location": "dbfs:/dbx/wids_mlops"
+            }
+        }
+    },
+    "inplace_jinja_support": false,
+    "failsafe_cluster_reuse_with_assets": false
+}
