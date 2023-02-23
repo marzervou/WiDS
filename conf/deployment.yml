@@ -80,16 +80,16 @@ environments:
                        '--conf-file', 'file:fuse://conf/pipeline_configs/sample_test.yml']
 
   staging:
-      strict_path_adjustment_policy: true
-      jobs:
-        - name: 'wids-staging-telco-churn-sample-integration-test'
-          <<:
-            - *staging-cluster-config
-          spark_python_task:
-            python_file: 'file://tests/integration/sample_test.py'
-            parameters: ['--env', 'file:fuse://conf/staging/.staging.env',
-                         '--conf-file', 'file:fuse://conf/pipeline_configs/sample_test.yml']
-
+    strict_path_adjustment_policy: true
+    workflows:
+      - name: 'wids-staging-telco-churn-sample-integration-test'
+        <<:
+          - *staging-cluster-config
+        spark_python_task:
+          python_file: 'file://tests/integration/sample_test.py'
+          parameters: ['--env', 'file:fuse://conf/staging/.staging.env',
+                       '--conf-file', 'file:fuse://conf/pipeline_configs/sample_test.yml']
+                       
   prod:
     strict_path_adjustment_policy: true
     workflows:
