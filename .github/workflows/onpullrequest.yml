@@ -46,4 +46,4 @@ jobs:
 
       - name: Run integration test [staging environment]
         run: |
-          dbx launch -e staging --trace wids-staging-telco-churn-sample-integration-test
+          dbx launch --job=wids-staging-telco-churn-sample-integration-test --environment=staging --as-run-submit --trace
